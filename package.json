@@ -1,0 +1,17 @@
+{
+  "name": "new-todo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "aodem <43295961+aodem@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aphrodite": "^2.3.1",
+    "babel": "^6.23.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "start": "parcel -p 8080 public/index.html"
+  }
+}
