@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
-export default function Item() {
-    return(
+export default function ListContainer() {
+    return (
         <div>
             
         </div>

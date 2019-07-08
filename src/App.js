@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import Container from './components/container';
+import ListContainer from './components/listContainer';
+import Item from './components/item';
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -32,7 +34,12 @@ export default function App() {
             <Container>
                 <div className={css(styles.inWrap)}>
                   <input type="text" className={css(styles.userIn)} />  
-                </div> 
+                </div>
+                <ListContainer>
+                    <ul>
+                        
+                    </ul>
+                </ListContainer>
             </Container>
         </div>
     )
