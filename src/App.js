@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import Container from './components/container';
 import ListContainer from './components/listContainer';
@@ -28,12 +28,16 @@ const styles = StyleSheet.create({
     
 })
 
+
 export default function App() {
+
+    const [task, setTask] = useState(' ');
+
     return(
         <div className={css(styles.wrapper)}>
             <Container>
                 <div className={css(styles.inWrap)}>
-                  <input type="text" className={css(styles.userIn)} />  
+                  <input type="text" className={css(styles.userIn)} onChange={(event) => {this.setState({task: event.target.value})}}/>  
                 </div>
                 <ListContainer>
                     <ul>
