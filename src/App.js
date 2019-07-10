@@ -31,13 +31,27 @@ const styles = StyleSheet.create({
 
 export default function App() {
 
-    const [task, setTask] = useState(' ');
+    const [task, setTask] = useState([]);
+    const taskArr = [];
+
+    function taskHandle(event){
+        event.preventDefault()
+        // taskArr.push(event.target.value);
+        console.log(event.target.value);
+        
+        setTask(task.push(event.target.value));
+        console.log(task);
+        
+    }
 
     return(
         <div className={css(styles.wrapper)}>
             <Container>
                 <div className={css(styles.inWrap)}>
-                  <input type="text" className={css(styles.userIn)} onChange={(event) => {this.setState({task: event.target.value})}}/>  
+                <form onSubmit={taskHandle}>
+                    <input type="text" className={css(styles.userIn)} />
+                    <input type="submit" value="Add Task" />
+                </form>
                 </div>
                 <ListContainer>
                     <ul>

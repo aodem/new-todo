@@ -3,8 +3,8 @@ import { StyleSheet, css } from 'aphrodite';
 
 export default function Item() {
     return(
-        <div>
-            
-        </div>
+        <li>
+            {props.children}
+        </li>
     )
 }
